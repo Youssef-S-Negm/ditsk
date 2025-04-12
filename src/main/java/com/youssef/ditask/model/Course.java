@@ -1,19 +1,19 @@
 package com.youssef.ditask.model;
 
 public class Course {
-    private String id;
+    private int id;
     private String name;
 
-    public Course(String id, String name) {
+    public Course(int id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
