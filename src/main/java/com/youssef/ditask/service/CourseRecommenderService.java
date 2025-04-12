@@ -10,6 +10,4 @@ public interface CourseRecommenderService {
 
     List<Course> getQualifierRecommendedCourses();
 
-    List<Course> getSecondaryRecommendedCourses();
-
 }

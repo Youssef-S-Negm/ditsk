@@ -13,12 +13,10 @@ public class CourseService implements CourseRecommenderService {
 
     private final CourseRecommender primaryCourseRecommender;
     private CourseRecommender qualifierCourseRecommender;
-    private final CourseRecommender secondaryCourseRecommender;
 
     @Autowired
-    public CourseService(CourseRecommender courseRecommender, CourseRecommender secondaryCourseRecommender) {
+    public CourseService(CourseRecommender courseRecommender) {
         this.primaryCourseRecommender = courseRecommender;
-        this.secondaryCourseRecommender = secondaryCourseRecommender;
     }
 
     @Autowired
@@ -38,8 +36,4 @@ public class CourseService implements CourseRecommenderService {
         return qualifierCourseRecommender.recommendedCourses();
     }
 
-    @Override
-    public List<Course> getSecondaryRecommendedCourses() {
-        return secondaryCourseRecommender.recommendedCourses();
-    }
 }
