@@ -21,7 +21,7 @@ This is an application that provides REST APIs to demonstrate different dependen
    ```
 5. Run the application
    ```bash
-   java -jar .\target\ditask-0.0.1-SNAPSHOT.jar
+   java -jar .\target\ditask-0.0.1-NO-PRIMARY-BEANS-SNAPSHOT.jar
    ```
 
 ## API endpoints
