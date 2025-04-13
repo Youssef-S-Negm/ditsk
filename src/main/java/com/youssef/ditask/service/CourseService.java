@@ -11,29 +11,29 @@ import java.util.List;
 @Service
 public class CourseService implements CourseRecommenderService {
 
-    private final CourseRecommender primaryCourseRecommender;
-    private CourseRecommender qualifierCourseRecommender;
+    private final CourseRecommender mainCourseRecommender;
+    private CourseRecommender secondaryCourseRecommender;
 
     @Autowired
-    public CourseService(CourseRecommender courseRecommender) {
-        this.primaryCourseRecommender = courseRecommender;
+    public CourseService(CourseRecommender mainCourseRecommender) {
+        this.mainCourseRecommender = mainCourseRecommender;
     }
 
     @Autowired
-    public void setPrimaryCourseRecommender(
-            @Qualifier("secondaryCourseRecommender") CourseRecommender qualifierCourseRecommender) {
-        this.qualifierCourseRecommender = qualifierCourseRecommender;
+    public void setSecondaryCourseRecommender(
+            @Qualifier("secondaryCourseRecommender") CourseRecommender secondaryCourseRecommender) {
+        this.secondaryCourseRecommender = secondaryCourseRecommender;
     }
 
 
     @Override
-    public List<Course> getPrimaryRecommendedCourses() {
-        return primaryCourseRecommender.recommendedCourses();
+    public List<Course> getMainRecommendedCourses() {
+        return mainCourseRecommender.recommendedCourses();
     }
 
     @Override
-    public List<Course> getQualifierRecommendedCourses() {
-        return qualifierCourseRecommender.recommendedCourses();
+    public List<Course> getSecondaryRecommendedCourses() {
+        return secondaryCourseRecommender.recommendedCourses();
     }
 
 }
