@@ -26,6 +26,8 @@ This is an application that provides REST APIs to demonstrate different dependen
 
 ## API endpoints
 
+Note: This is branch has the primary bean. It is covering field injection using `@Qualifier` and `@Autowired` primary bean injection. Please refer to [no-primary-beans](https://github.com/Youssef-S-Negm/ditsk/tree/no-primary-beans) for trying field injection using `@Qualifier` and variable name matching.
+
 | URL                               | Method | Response                                                                                                  | Notes                                                                                                                                   
 |-----------------------------------|--------|-----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
 | `http://localhost:8080/primary`   | `GET`  | `[{"id":1,"name":"Introduction to Java Programming"},{"id":2,"name":"Introduction to Spring framework"}]` | This will return the recommended courses provided by the primary bean found in `com.youssef.ditask.config.ApplicationConfiguration`     |
