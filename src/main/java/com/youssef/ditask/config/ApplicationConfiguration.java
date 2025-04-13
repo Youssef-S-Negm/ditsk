@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Primary;
 public class ApplicationConfiguration {
 
     @Bean
-    @Primary
     public CourseRecommender mainCourseRecommender() {
         return new FirstCourseRecommender();
     }
