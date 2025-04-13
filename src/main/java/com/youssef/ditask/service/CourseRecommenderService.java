@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface CourseRecommenderService {
 
-    List<Course> getPrimaryRecommendedCourses();
+    List<Course> getMainRecommendedCourses();
 
-    List<Course> getQualifierRecommendedCourses();
+    List<Course> getSecondaryRecommendedCourses();
 
 }
