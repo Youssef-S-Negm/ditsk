@@ -23,8 +23,8 @@ public class CourseController {
     @GetMapping("/{qualifier}")
     public ResponseEntity<List<Course>> getCourses(@PathVariable String qualifier) {
         return switch (qualifier) {
-            case "primary" -> ResponseEntity.ok(courseRecommenderService.getPrimaryRecommendedCourses());
-            case "qualifier" -> ResponseEntity.ok(courseRecommenderService.getQualifierRecommendedCourses());
+            case "match-name" -> ResponseEntity.ok(courseRecommenderService.getMainRecommendedCourses());
+            case "qualifier" -> ResponseEntity.ok(courseRecommenderService.getSecondaryRecommendedCourses());
             default -> ResponseEntity.badRequest().build();
         };
     }
